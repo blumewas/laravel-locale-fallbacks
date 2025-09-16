@@ -36,7 +36,7 @@ class LaravelLocaleFallbacks
         // Start with the current locale
         $lastLocale = $locale;
 
-        while ($lastLocale !== null) {
+        while (! empty($lastLocale)) {
             $localeFallbacks = $this->getFallbacksForLocale($lastLocale);
 
             if (empty($localeFallbacks)) {

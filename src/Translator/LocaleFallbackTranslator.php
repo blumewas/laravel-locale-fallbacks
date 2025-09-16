@@ -50,7 +50,7 @@ class LocaleFallbackTranslator extends BaseTranslator
 
         // as a last resort, maybe try the default fallback_locale
         if ($fallback && $this->fallback !== $locale) {
-            $line = parent::get($key, $replace, $fallback, false);
+            $line = parent::get($key, $replace, $this->fallback, false);
             if ($line !== $key) {
                 return $line;
             }
