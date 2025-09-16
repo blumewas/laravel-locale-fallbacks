@@ -16,7 +16,7 @@ class LaravelLocaleFallbacksServiceProvider extends TranslationServiceProvider
         // Load the configuration file
         $this->publishes([
             __DIR__.'/../config/locale-fallbacks.php' => config_path('locale-fallbacks.php'),
-        ]);
+        ], 'laravel-locale-fallbacks-config');
     }
 
     /**
